@@ -1,0 +1,14 @@
+.home_container {
+    background: url(../componentes/img/fundo.jpg);
+    background-position: center center;
+    background-size: cover cover;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .home_container {
+    
+  }
