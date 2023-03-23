@@ -17,7 +17,7 @@ function Pernas() {
 
   return (
     <div className='pernas'>
-      <p>Velocidade</p>
+      <p>Pernas</p>
       <p>
         <button onClick={handleIncrement}>+</button>
         {count}

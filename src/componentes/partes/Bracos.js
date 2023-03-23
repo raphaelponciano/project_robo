@@ -17,7 +17,7 @@ function Bracos() {
 
   return (
     <div className='bracos'>
-      <p>Força</p>
+      <p>Braços</p>
       <p>
         <button onClick={handleIncrement}>+</button>
         {count}

@@ -17,7 +17,7 @@ function Foguete() {
 
   return (
     <div className='foguete'>
-      <p>Energia</p>
+      <p>Foguete</p>
       <p>
         <button onClick={handleIncrement}>+</button>
         {count}

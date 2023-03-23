@@ -1,28 +1,31 @@
 import React, { useState } from 'react';
+import Limite from '../layout/Limite';
+
 import style from '../partes/Blindagem.module.css'
 
-function Blindagem() {
-  const [count, setCount] = useState(0);
 
-  const handleIncrement = () => {
-    if (count < 99) {
-      setCount(count + 1);
+function Blindagem() {
+  const [contador, setContador] = useState(0);
+
+  const valorMaximo = () => {
+    if (Limite(contador)) {
+      setContador(contador + 1);
     }
   }
 
-  const handleDecrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+  const valorMinimo = () => {
+    if (Limite(contador)) {
+      setContador(contador - 1);
     }
   }
   
   return (
     <div className={style.blindagem.modules}>
-      <p>HP</p>
+      <p>Blindagem</p>
       <p>
-      <button onClick={handleIncrement}>+</button>
-      {count}
-      <button onClick={handleDecrement}>-</button>
+      <button onClick={valorMaximo}>+</button>
+      {contador}
+      <button onClick={valorMinimo}>-</button>
       </p>
     </div>
   );
