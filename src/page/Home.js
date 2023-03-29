@@ -11,20 +11,32 @@ import styles from './Home.module.css';
 
 
 
-function Home () {
+function Home() {
 
 
-return (
-  <section className={styles.home_container}>
-    <div>
-    <Estatisticas/>
-    <Bracos/>    
-    <Blindagem/>
-    <Pernas/>
-    <Foguete/>
-    </div>
-  </section>
-)
+  return (
+    <section className={styles.home_container}>
+      <image src={'../componentes/img/robotron.png'} />
+
+      <div className={styles.estatisticas_container}>
+        <Estatisticas />
+      </div>
+      <div className={styles.partes_container}>
+        <div className={styles.ajusteOpcoes_container}>
+          <Bracos />
+        </div>
+        <div className={styles.ajusteOpcoes_container}>
+          <Blindagem />
+        </div>
+        <div className={styles.ajusteOpcoes_container}>
+          <Pernas />
+        </div>
+        <div className={styles.ajusteOpcoes_container}>
+          <Foguete />
+        </div>
+      </div>
+    </section >
+  )
 }
 
 export default Home

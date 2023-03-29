@@ -1,30 +1,43 @@
 import React, { useState } from 'react';
+import Limite from '../layout/Limite';
 
-function Foguete() {
-  const [count, setCount] = useState(0);
+import style from '../partes/Blindagem.module.css';
+import style2 from '../partes/GeralPartes.module.css';
 
-  const handleIncrement = () => {
-    if (count < 99) {
-      setCount(count + 1);
+
+function Blindagem() {
+  const [contador, setContador] = useState(0);
+
+  const valorMaximo = () => {
+    if (Limite(contador)) {
+      setContador(contador + 1);
     }
   }
 
-  const handleDecrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+  const valorMinimo = () => {
+    if (Limite(contador)) {
+      setContador(contador - 1);
     }
   }
 
   return (
-    <div className='foguete'>
-      <p>Energia</p>
-      <p>
-        <button onClick={handleIncrement}>+</button>
-        {count}
-        <button onClick={handleDecrement}>-</button>
-      </p>
+    <div id={style.foguete_container} className={ style2.mainPartes_container}>
+      
+      <div clasName={style.equipamento_container}>
+        
+        <label className={style2.peca_titulo}>Foguete</label>
+        
+        <div className={style2.controle_geral}>
+          <button className={style2.controle_ajuste} onClick={valorMaximo}>+</button>
+          <input type="text" className={style2.controle_contador} value="00" />
+          <button className={style2.controle_ajuste} onClick={valorMinimo}>-</button>
+        </div>
+      
+      </div>
+      
+      <hr className={style2.linha}></hr>
     </div>
   );
 }
 
-export default Foguete;
+export default Blindagem;
