@@ -1,15 +1,14 @@
-import Buttom from '../layout/Buttom';
-
-import style from '../partes/Blindagem.module.css';
-import style2 from '../partes/GeralPartes.module.css';
+import Buttom from "../layout/Buttom"
 
 
 function Blindagem() {
- <div className={style.equipamento_container}>
-      <Buttom/>
-      <hr className={style2.linha}></hr>
+  return (
+    <div>
+      <div>
+        <label>Blindagem</label>
+      </div>
+      <Buttom />
     </div>
-  
+  )
 }
-
-export default Blindagem;
+export default Blindagem

@@ -1,38 +1,34 @@
-import React, { useState } from 'react';
-import style2 from '../partes/GeralPartes.module.css';
+import React, { useState } from "react";
+import {Descricao, valorMaximo, ValorMinimo} from "../layout/Atributos"
 
-function Buttom() {
-  const Maximo = 99;
-  const Minimo = 0;
 
-  const [contador, setContador] = useState(0);
 
-  const valorMaximo = () => {
-    if (contador < Maximo) {
-      setContador(contador + 1);
+function AtributoPersonagem (props){
+  const [valor, setValor] = useState(0)
+ 
+  const diminuirValor = () => {
+if(valor > props.ValorMinimo){
+  setValor(valor -1)
+}
+  };
+   const aumentarValor = () => {
+    if (valor < props.valoMaximo) {
+      setValor(valor + 1)
     }
-  }
+   }
 
-  const valorMinimo = () => {
-    if (contador > Minimo) {
-      setContador(contador - 1);
-    }
-  }
+ 
 
   return (
-    <div id={style.blindagem_container} className={ style2.mainPartes_container}>
-      
-      <div clasName={style.equipamento_container}>
-        
-        <label className={style2.peca_titulo}>Blindagem</label>
-        
-        <div className={style2.controle_geral}>
-          <button className={style2.controle_ajuste} onClick={valorMaximo}>+</button>
-          <input type="text" className={style2.controle_contador} value={contador} />
-          <button className={style2.controle_ajuste} onClick={valorMinimo}>-</button>
+      <div>
+        <div>
+          <label>{props.Descricao}</label>
+          <button  onClick={diminuirValor}>-</button>
+          <p>{valor}</p>
+          <button  onClick={aumentarValor}>+</button>
         </div>
       
       </div>
- </div>
+
 )
-} export default Buttom
+} export default AtributoPersonagem
