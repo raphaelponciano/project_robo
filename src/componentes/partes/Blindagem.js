@@ -1,4 +1,6 @@
+import React from "react"
 import Buttom from "../layout/Buttom"
+
 
 
 function Blindagem() {
@@ -7,7 +9,7 @@ function Blindagem() {
       <div>
         <label>Blindagem</label>
       </div>
-      <Buttom />
+      <Buttom valorMinimo={10} valorMaximo={15}/>
     </div>
   )
 }

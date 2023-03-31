@@ -1,34 +1,29 @@
-import React, { useState } from "react";
-import {Descricao, valorMaximo, ValorMinimo} from "../layout/Atributos"
+import React, { useState } from 'react';
 
+function Buttom({valorMinimo, valorMaximo, onValueChange}) {
+  const [count, setCount] = useState(valorMinimo);
 
-
-function AtributoPersonagem (props){
-  const [valor, setValor] = useState(0)
- 
-  const diminuirValor = () => {
-if(valor > props.ValorMinimo){
-  setValor(valor -1)
-}
-  };
-   const aumentarValor = () => {
-    if (valor < props.valoMaximo) {
-      setValor(valor + 1)
+  const incrementCount = () => {
+    if (count < valorMaximo) {
+    setCount(count + 1);
+    onValueChange(count + 1)
     }
-   }
+  };
 
- 
+  const decrementCount = () => {
+    if (count < valorMinimo) {
+    setCount(count - 1);
+    onValueChange(count-1)
+    }
+  };
 
   return (
-      <div>
-        <div>
-          <label>{props.Descricao}</label>
-          <button  onClick={diminuirValor}>-</button>
-          <p>{valor}</p>
-          <button  onClick={aumentarValor}>+</button>
-        </div>
-      
-      </div>
+    <div>
+      <button onClick={decrementCount}>-</button>
+      <label>{count}</label>
+      <button onClick={incrementCount}>+</button>
+    </div>
+  );
+}
 
-)
-} export default AtributoPersonagem
+export default Buttom;
