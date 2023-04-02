@@ -1,16 +1,23 @@
 import React from "react"
 import Buttom from "../layout/Buttom"
+import style from "../css/GeralPartes.module.css"
 
 
 
 function Blindagem() {
   return (
     <div>
-      <div>
-        <label>Blindagem</label>
+      <div className={style.mainPartes_container}>
+        <div>
+          <label className={style.peca_titulo}>Blindagem</label>
+        </div>
+        <div>
+          <Buttom valorMinimo={10} valorMaximo={15} />
+        </div>
       </div>
-      <Buttom valorMinimo={10} valorMaximo={15}/>
+      <hr className={style.linha} />
     </div>
+
   )
 }
 export default Blindagem

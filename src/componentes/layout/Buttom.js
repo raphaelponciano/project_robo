@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import style from "../css/GeralPartes.module.css";
+
 function Buttom({valorMinimo, valorMaximo, onValueChange}) {
   const [count, setCount] = useState(valorMinimo);
 
@@ -19,9 +21,12 @@ function Buttom({valorMinimo, valorMaximo, onValueChange}) {
 
   return (
     <div>
-      <button onClick={decrementCount}>-</button>
-      <label>{count}</label>
-      <button onClick={incrementCount}>+</button>
+    <div className={style.controle_geral}>
+      <button className={style.controle_ajuste} onClick={decrementCount}>-</button>
+      <label className={style.controle_contador}>{count}</label>
+      <button className={style.controle_ajuste} onClick={incrementCount}>+</button>
+    </div>
+    
     </div>
   );
 }
