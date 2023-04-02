@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 
 import style from "../css/GeralPartes.module.css";
 
-function Buttom({valorMinimo, valorMaximo, onValueChange}) {
+function Buttom({valorMinimo, valorMaximo,  onCounterUpdate }) {
   const [count, setCount] = useState(valorMinimo);
 
   const incrementCount = () => {
     if (count < valorMaximo) {
     setCount(count + 1);
-    onValueChange(count + 1)
+    onCounterUpdate(count + 1)
     }
   };
 
   const decrementCount = () => {
     if (count < valorMinimo) {
     setCount(count - 1);
-    onValueChange(count-1)
+    onCounterUpdate(count-1)
     }
   };
 
