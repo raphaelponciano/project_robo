@@ -1,16 +1,18 @@
 import style from "../css/Estatisticas.module.css";
-    import React from "react";
-    import Button from "./Button";
+import React, { useState } from "react";
+import Buttom from "./Buttom";
     
     function Atributos() {
         const [atributos, setAtributos] = useState({
           forca: 0,
           agilidade: 0,
-          velocidade: 0
+          velocidade: 0,
+          poder: 0,
+          energia: 0
         });
       
-        const handleCounterUpdate = (counterValue) => {
-          setatributos({
+        const handleCountUpdate = (counterValue) => {
+          setAtributos({
             forca: counterValue * 2,
             agilidade: counterValue * 3,
             velocidade: counterValue * 4
@@ -19,7 +21,7 @@ import style from "../css/Estatisticas.module.css";
     
     return (
         <section className={style.box_estatisticas}>
-            <Button onCounterUpdate={handleCounterUpdate}/>
+            
             <div className={style.estatistica}>
                 <p className={style.estatistica_titulo}>Força</p>
                 <div className={style.estatistica_valor}>
@@ -29,7 +31,7 @@ import style from "../css/Estatisticas.module.css";
             <div className={style.estatistica}>
                 <p className={style.estatistica_titulo}>Poder</p>
                 <div className={style.estatistica_valor}>
-                    <p className={style.estatistica_numero}>630</p>
+                    <p className={style.estatistica_numero}>{atributos.poder}</p>
                 </div>
             </div>
             <div className={style.estatistica}>
@@ -44,7 +46,13 @@ import style from "../css/Estatisticas.module.css";
                     <p className={style.estatistica_numero}>{atributos.velocidade}</p>
                 </div>
             </div>
+            <div className={style.estatistica}>
+                <p className={style.estatistica_titulo}>Agilidade</p>
+                <div className={style.estatistica_valor}>
+                    <p className={style.estatistica_numero}>{atributos.agilidade}</p>
+                </div>
+                </div>
         </section>
     )
 }
-export default Atributos
+export default Atributos 

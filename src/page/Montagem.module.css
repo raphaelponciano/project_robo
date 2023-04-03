@@ -1,14 +1,3 @@
-.montagem_container {
-    background: url(../componentes/img/fundo.jpg);
-    background-position: center center;
-    background-size: cover;
-    padding: 0;
-    margin: 5;
-    font-weight: 300;
-    height: 100vh;
-    width: 100vw;
-  }
-
   .montagem_container {
     display: flex
     
@@ -30,6 +19,7 @@
     padding: 10px 10px;
     margin: 15px;
     text-align: center;
+    width: 200px;
   }
 
   .estatisticas_container, .partes_container {

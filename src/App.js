@@ -1,12 +1,12 @@
 import './App.css';
-import Montagem from './page/Montagem';
+import Main from './page/Main';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Montagem/>
-
+      <Main/>
     </div>
   );
 }

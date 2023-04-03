@@ -4,18 +4,21 @@ import style from "../css/GeralPartes.module.css";
 
 function Buttom({valorMinimo, valorMaximo,  onCounterUpdate }) {
   const [count, setCount] = useState(valorMinimo);
-
+  const [counter, setCounter] = useState(0);
+  
   const incrementCount = () => {
     if (count < valorMaximo) {
     setCount(count + 1);
-    onCounterUpdate(count + 1)
+    setCounter(counter + 1);
+    onCounterUpdate(counter + 1);
     }
   };
 
   const decrementCount = () => {
     if (count < valorMinimo) {
     setCount(count - 1);
-    onCounterUpdate(count-1)
+    setCounter(counter - 1);
+    onCounterUpdate(counter - 1);
     }
   };
 
