@@ -8,8 +8,8 @@ return (
 <div className={style.main_container}>
 
     <section className={style.robotron}>
-            <img className={style.robo} src={robotron.png} alt="Robotron"/>
-            <figcaption className={style.titulo}>ROBOTRON <br/>2000</figcaption>
+            
+            <figcaption className={style.titulo}>Project Robo<br/>2000</figcaption>
             <Montagem/>
         </section>
 </div>

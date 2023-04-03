@@ -1,5 +1,7 @@
   .montagem_container {
-    display: flex
+    display: flex;
+    position: relative;
+    left: 450px;
     
   }
 
