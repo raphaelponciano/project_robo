@@ -1,4 +1,11 @@
 .App {
   padding: 0 0 0 0;
+  font-family: 'Teko', sans-serif;
 }
+:root {
+  --main-cinza: #CCCCCC;
+  --main-branco: #FFFFFF;
+  --main-preto: #000000;
+}
+
 
