@@ -1,9 +1,9 @@
-import Blindagem from "../componentes/partes/Blindagem";
-import Atributos from "../componentes/layout/Atributos";
+import Blindagem from "../partes/Blindagem";
+import Atributos from "../layout/Atributos";
 import style from "./Montagem.module.css";
-import Bracos from "../componentes/partes/Bracos";
-import Foguete from "../componentes/partes/Foguete";
-import Pernas from "../componentes/partes/Pernas";
+import Bracos from "../partes/Bracos";
+import Foguete from "../partes/Foguete";
+import Pernas from "../partes/Pernas";
 
 function Montagem() {
     return (

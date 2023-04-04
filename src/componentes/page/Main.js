@@ -1,6 +1,5 @@
 import React from 'react';
 import Montagem from './Montagem';
-import robotron from "../componentes/img/robotron.png"
 import style from "./Main.module.css"
 
 function Main () {

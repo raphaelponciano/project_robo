@@ -1,5 +1,5 @@
 .main_container {
-    background: url(../componentes/img/fundo.jpg);
+    background: url(../img/fundo.jpg);
     background-position: center center;
     background-size: cover;
     padding: 0;
@@ -16,7 +16,7 @@
 }
 
 .robotron {
-    background: url(../componentes/img/estrutura.png) no-repeat;
+    background: url(../img/estrutura.png) no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0;
@@ -30,7 +30,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(../componentes/img/robotron.png);
+    background-image: url(../img/robotron.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
