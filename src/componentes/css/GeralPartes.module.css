@@ -69,3 +69,7 @@ margin-right: 15px;
     border-color: rgb(94, 88, 88);
     margin: 20px;
 }
+
+.atributo_display {
+    display: none;
+}

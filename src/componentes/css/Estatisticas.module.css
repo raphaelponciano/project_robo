@@ -84,3 +84,7 @@
         margin: 10vh auto;
     }
 }
+
+.display_buttom {
+    display: none;
+}
