@@ -4,7 +4,9 @@ import style from "../css/GeralPartes.module.css"
 
 
 
-function Foguete() {
+function Foguete(props) {
+  const { valorMaximo, valorMinimo, atualizaValor } = props;
+
   return (
     <div>
       <div className={style.mainPartes_container}>
@@ -12,7 +14,10 @@ function Foguete() {
           <label className={style.peca_titulo}>Foguete</label>
         </div>
         <div>
-          <Buttom valorMinimo={10} valorMaximo={15} />
+          <Buttom valorMinimo={valorMinimo}
+            valorMaximo={valorMaximo}
+            atualizaValor={atualizaValor}
+          />
         </div>
       </div>
       <hr className={style.linha} />

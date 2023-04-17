@@ -22,15 +22,14 @@ function Buttom(props) {
   };
 
 
-
-   return (
+  return (
     <div>
-    <div className={style.controle_geral}>
-      <button className={style.controle_ajuste} onClick={diminuiValor}>-</button>
-      <label className={style.controle_contador}>{count}</label>
-      <button className={style.controle_ajuste} onClick={aumentaValor}>+</button>
-      
-    </div>
+      <div className={style.controle_geral}>
+        <button className={style.controle_ajuste} onClick={diminuiValor}>-</button>
+        <label className={style.controle_contador}>{count}</label>
+        <button className={style.controle_ajuste} onClick={aumentaValor}>+</button>
+
+      </div>
     </div>
   );
 }

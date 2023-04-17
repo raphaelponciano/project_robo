@@ -11,38 +11,49 @@ import React, { useState } from "react";
 function Montagem() {
     const [count, setCount] = useState(0);
 
-  const atualizaValor = (valor) => {
-    setCount(valor);
-  };
+    const atualizaValor = (valor) => {
+        setCount(valor);
+    };
 
     return (
         <div className={style.montagem_container}>
             <div>
-                
+
                 <div className={style.partes_container}>
                     <div>
-                        <Blindagem 
-                        valorMaximo={15} 
-                        valorMinimo={10} 
-                        atualizaValor={atualizaValor}
+                        <Blindagem
+                            valorMaximo={15}
+                            valorMinimo={10}
+                            atualizaValor={atualizaValor}
                         />
                     </div>
                     <div>
-                        <Bracos 
-                       
+                        <Bracos
+                            valorMaximo={15}
+                            valorMinimo={10}
+                            atualizaValor={atualizaValor}
                         />
                     </div>
                     <div>
-                        <Foguete />
+                        <Foguete
+                            valorMaximo={15}
+                            valorMinimo={10}
+                            atualizaValor={atualizaValor}
+                        />
+
                     </div>
                     <div>
-                        <Pernas />
+                        <Pernas
+                            valorMaximo={15}
+                            valorMinimo={10}
+                            atualizaValor={atualizaValor}
+                        />
                     </div>
-                        </div>
-                    <div className={style.estatisticas_container}>
-                    <Atributos 
-                    count={count}
-                    
+                </div>
+                <div className={style.estatisticas_container}>
+                    <Atributos
+                        count={count}
+
                     />
                 </div>
             </div>
