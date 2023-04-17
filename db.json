@@ -1,0 +1,14 @@
+{
+    "partes": [
+    {
+        "name": "Blindagem",
+        "id":"1",
+        "valor": "0"
+    },
+    {
+        "name": "Braco",
+        "id":"2",
+        "valor": "0"
+    }
+    ]
+}

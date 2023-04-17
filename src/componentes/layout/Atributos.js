@@ -1,16 +1,19 @@
 import style from "../css/Estatisticas.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 
 
-function Atributos({ count }) {
-    const [atributos, setAtributos] = useState({
-      forca: count * 2,
-      agilidade: count * 3,
-      velocidade: count * 4
-    });
-  
+function Atributos(props) {
+    const { count } = props;
+  const [forca, setForca] = useState(0);
+  const [agilidade, setAgilidade] = useState(0);
+
+  useEffect(() => {
+    setForca(count * 10);
+    setAgilidade(count * 5);
+  }, [count]);
+        
     return (
         <div>
            <section className={style.box_estatisticas}>
@@ -18,7 +21,7 @@ function Atributos({ count }) {
                 <div className={style.estatistica}>
                     <p className={style.estatistica_titulo}>Força</p>
                     <div className={style.estatistica_valor}>
-                        <p className={style.estatistica_numero}>{atributos.forca}</p>
+                        <p className={style.estatistica_numero}>{forca}</p>
                     </div>
                 </div>
                 <div className={style.estatistica}>
@@ -42,11 +45,12 @@ function Atributos({ count }) {
                 <div className={style.estatistica}>
                     <p className={style.estatistica_titulo}>Agilidade</p>
                     <div className={style.estatistica_valor}>
-                        <p className={style.estatistica_numero}>{0}</p>
+                        <p className={style.estatistica_numero}>{agilidade ?? 0}</p>
                     </div>
                 </div>
             </section>
         </div>
     )
 }
+
 export default Atributos 

@@ -5,19 +5,32 @@ import Bracos from "../partes/Bracos";
 import Foguete from "../partes/Foguete";
 import Pernas from "../partes/Pernas";
 
+
+import React, { useState } from "react";
+
 function Montagem() {
+    const [count, setCount] = useState(0);
+
+  const atualizaValor = (valor) => {
+    setCount(valor);
+  };
+
     return (
         <div className={style.montagem_container}>
             <div>
-                <div className={style.estatisticas_container}>
-                    <Atributos />
-                </div>
+                
                 <div className={style.partes_container}>
                     <div>
-                        <Blindagem />
+                        <Blindagem 
+                        valorMaximo={15} 
+                        valorMinimo={10} 
+                        atualizaValor={atualizaValor}
+                        />
                     </div>
                     <div>
-                        <Bracos />
+                        <Bracos 
+                       
+                        />
                     </div>
                     <div>
                         <Foguete />
@@ -25,9 +38,16 @@ function Montagem() {
                     <div>
                         <Pernas />
                     </div>
+                        </div>
+                    <div className={style.estatisticas_container}>
+                    <Atributos 
+                    count={count}
+                    
+                    />
                 </div>
             </div>
         </div>
     )
 }
+
 export default Montagem

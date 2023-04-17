@@ -1,37 +1,36 @@
 import React, { useState } from 'react';
 
 import style from "../css/GeralPartes.module.css";
-import Atributos from './Atributos';
 
-function Buttom({valorMinimo, valorMaximo}) {
+
+function Buttom(props) {
+  const { valorMaximo, valorMinimo, atualizaValor } = props;
   const [count, setCount] = useState(valorMinimo);
-  
-  
-  const incrementCount = () => {
+
+  const aumentaValor = () => {
     if (count < valorMaximo) {
-    setCount(count + 1);
-   
-   
+      setCount(count + 1);
+      atualizaValor(count + 1)
     }
   };
 
-  const decrementCount = () => {
+  const diminuiValor = () => {
     if (count > valorMinimo) {
-    setCount(count - 1);
-  
-    
+      setCount(count - 1);
+      atualizaValor(count - 1)
     }
   };
+
+
 
    return (
     <div>
     <div className={style.controle_geral}>
-      <button className={style.controle_ajuste} onClick={decrementCount}>-</button>
-      <label className={style.controle_contador} >{count}</label>
-      <button className={style.controle_ajuste} onClick={incrementCount}>+</button>
+      <button className={style.controle_ajuste} onClick={diminuiValor}>-</button>
+      <label className={style.controle_contador}>{count}</label>
+      <button className={style.controle_ajuste} onClick={aumentaValor}>+</button>
       
     </div>
-    <Atributos className={style.atributo_display} count={count} />
     </div>
   );
 }
