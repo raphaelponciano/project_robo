@@ -4,7 +4,8 @@ import style from "../css/GeralPartes.module.css"
 
 
 
-function Bracos() {
+function Bracos(props) {
+  const { valorMaximo, valorMinimo, atualizaValor } = props;
   return (
     <div>
       <div className={style.mainPartes_container}>
@@ -12,7 +13,10 @@ function Bracos() {
           <label className={style.peca_titulo}>Braços</label>
         </div>
         <div>
-          <Buttom valorMinimo={10} valorMaximo={15} />
+          <Buttom valorMinimo={valorMinimo}
+            valorMaximo={valorMaximo}
+            atualizaValor={atualizaValor}
+          />
         </div>
       </div>
       <hr className={style.linha} />
