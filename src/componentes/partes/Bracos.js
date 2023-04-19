@@ -5,7 +5,7 @@ import style from "../css/GeralPartes.module.css"
 
 
 function Bracos(props) {
-  const { valorMaximo, valorMinimo, atualizaValor } = props;
+  const { valorMaximo, valorMinimo, valorBraco } = props;
   return (
     <div>
       <div className={style.mainPartes_container}>
@@ -15,7 +15,7 @@ function Bracos(props) {
         <div>
           <Buttom valorMinimo={valorMinimo}
             valorMaximo={valorMaximo}
-            atualizaValor={atualizaValor}
+            valorBraco={valorBraco}
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import style from "../css/GeralPartes.module.css"
 
 
 function Blindagem(props) {
-  const { valorMaximo, valorMinimo, atualizaValor } = props;
+  const { valorMaximo, valorMinimo, valorBlindagem } = props;
   
   return (
     <div>
@@ -16,7 +16,7 @@ function Blindagem(props) {
         <div>
           <Buttom  valorMinimo={valorMinimo} 
           valorMaximo={valorMaximo} 
-          atualizaValor={atualizaValor}
+          valorBlindagem={valorBlindagem}
           />
         </div>
       </div>

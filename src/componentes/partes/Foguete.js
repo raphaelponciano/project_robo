@@ -5,7 +5,7 @@ import style from "../css/GeralPartes.module.css"
 
 
 function Foguete(props) {
-  const { valorMaximo, valorMinimo, atualizaValor } = props;
+  const { valorMaximo, valorMinimo, valorFoguete } = props;
 
   return (
     <div>
@@ -16,7 +16,7 @@ function Foguete(props) {
         <div>
           <Buttom valorMinimo={valorMinimo}
             valorMaximo={valorMaximo}
-            atualizaValor={atualizaValor}
+            valorFoguete={valorFoguete}
           />
         </div>
       </div>

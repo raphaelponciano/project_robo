@@ -10,8 +10,18 @@ import React, { useState } from "react";
 
 function Montagem() {
     const [count, setCount] = useState(0);
+    const [newValorBlindagem, setNewValorBlindagem] = useState(0);
 
-    const atualizaValor = (valor) => {
+    const valorBlindagem = (blindagemValor) => {
+        setNewValorBlindagem(blindagemValor);
+    };
+    const valorBraco = (valor) => {
+        setCount(valor);
+    };
+    const valorPerna = (valor) => {
+        setCount(valor);
+    };
+    const valorFoguete = (valor) => {
         setCount(valor);
     };
 
@@ -24,21 +34,21 @@ function Montagem() {
                         <Blindagem
                             valorMaximo={15}
                             valorMinimo={10}
-                            atualizaValor={atualizaValor}
+                            valorBlindagem={valorBlindagem}
                         />
                     </div>
                     <div>
                         <Bracos
                             valorMaximo={15}
                             valorMinimo={10}
-                            atualizaValor={atualizaValor}
+                            valorBraco={valorBraco}
                         />
                     </div>
                     <div>
                         <Foguete
                             valorMaximo={15}
                             valorMinimo={10}
-                            atualizaValor={atualizaValor}
+                            valorFoguete={valorFoguete}
                         />
 
                     </div>
@@ -46,13 +56,14 @@ function Montagem() {
                         <Pernas
                             valorMaximo={15}
                             valorMinimo={10}
-                            atualizaValor={atualizaValor}
+                            valorPerna={valorPerna}
                         />
                     </div>
                 </div>
                 <div className={style.estatisticas_container}>
                     <Atributos
                         count={count}
+                        newValorBlindagem={newValorBlindagem}
 
                     />
                 </div>

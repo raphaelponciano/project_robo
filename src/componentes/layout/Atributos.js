@@ -5,14 +5,15 @@ import React, { useEffect, useState } from "react";
 
 
 function Atributos(props) {
-    const { count } = props;
-  const [forca, setForca] = useState(0);
+    const { count, newValorBlindagem } = props;
+  
+    const [forca, setForca] = useState(0);
   const [agilidade, setAgilidade] = useState(0);
 
   useEffect(() => {
-    setForca(count * 10);
+    setForca((count + newValorBlindagem) * 10);
     setAgilidade(count * 5);
-  }, [count]);
+  }, [count, newValorBlindagem]);
         
     return (
         <div>
