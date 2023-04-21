@@ -9,21 +9,28 @@ import Pernas from "../partes/Pernas";
 import React, { useState } from "react";
 
 function Montagem() {
-    const [count, setCount] = useState(0);
     const [newValorBlindagem, setNewValorBlindagem] = useState(0);
+    const [newValorBraco, setNewValorBraco] = useState(0);
+    const [newValorPerna, setNewValorPerna] = useState(0);
+    const [newValorFoguete, setNewValorFoguete] = useState(0);
 
     const valorBlindagem = (blindagemValor) => {
-        setNewValorBlindagem(blindagemValor);
+        setNewValorBlindagem(blindagemValor - valorMinimoBlindagem);
     };
-    const valorBraco = (valor) => {
-        setCount(valor);
+    const valorBraco = (bracoValor) => {
+        setNewValorBraco(bracoValor - valorMinimoBraco);
     };
-    const valorPerna = (valor) => {
-        setCount(valor);
+    const valorPerna = (pernaValor) => {
+        setNewValorPerna(pernaValor - valorMinimoPerna);
     };
-    const valorFoguete = (valor) => {
-        setCount(valor);
+    const valorFoguete = (fogueteValor) => {
+        setNewValorFoguete(fogueteValor - valorMinimoFoguete);
     };
+
+    const valorMinimoBlindagem = 10;
+    const valorMinimoBraco = 10;
+    const valorMinimoPerna = 10;
+    const valorMinimoFoguete = 10;
 
     return (
         <div className={style.montagem_container}>
@@ -33,21 +40,21 @@ function Montagem() {
                     <div>
                         <Blindagem
                             valorMaximo={15}
-                            valorMinimo={10}
+                            valorMinimo={valorMinimoBlindagem}
                             valorBlindagem={valorBlindagem}
                         />
                     </div>
                     <div>
                         <Bracos
                             valorMaximo={15}
-                            valorMinimo={10}
+                            valorMinimo={valorMinimoBraco}
                             valorBraco={valorBraco}
                         />
                     </div>
                     <div>
                         <Foguete
                             valorMaximo={15}
-                            valorMinimo={10}
+                            valorMinimo={valorMinimoFoguete}
                             valorFoguete={valorFoguete}
                         />
 
@@ -55,16 +62,25 @@ function Montagem() {
                     <div>
                         <Pernas
                             valorMaximo={15}
-                            valorMinimo={10}
+                            valorMinimo={valorMinimoPerna}
                             valorPerna={valorPerna}
                         />
                     </div>
                 </div>
                 <div className={style.estatisticas_container}>
                     <Atributos
-                        count={count}
-                        newValorBlindagem={newValorBlindagem}
 
+                        newValorBlindagem={newValorBlindagem}
+                        valorMinimoBlindagem={valorMinimoBlindagem}
+
+                        newValorBraco={newValorBraco}
+                        valorMinimoBraco={valorMinimoBraco}
+
+                        newValorPerna={newValorPerna}
+                        valorMinimoPerna={valorMinimoPerna}
+
+                        newValorFoguete={newValorFoguete}
+                        valorMinimoFoguete={valorMinimoFoguete}
                     />
                 </div>
             </div>
