@@ -27,10 +27,12 @@ function Montagem() {
         setNewValorFoguete(fogueteValor - valorMinimoFoguete);
     };
 
-    const valorMinimoBlindagem = 10;
-    const valorMinimoBraco = 10;
-    const valorMinimoPerna = 10;
-    const valorMinimoFoguete = 10;
+    const valorMinimoBlindagem = 0;
+    const valorMinimoBraco = 0;
+    const valorMinimoPerna = 0;
+    const valorMinimoFoguete = 0;
+
+    const valorMaximoGeral = 20
 
     return (
         <div className={style.montagem_container}>
@@ -39,21 +41,21 @@ function Montagem() {
                 <div className={style.partes_container}>
                     <div>
                         <Blindagem
-                            valorMaximo={15}
+                            valorMaximo={valorMaximoGeral}
                             valorMinimo={valorMinimoBlindagem}
                             valorBlindagem={valorBlindagem}
                         />
                     </div>
                     <div>
                         <Bracos
-                            valorMaximo={15}
+                            valorMaximo={valorMaximoGeral}
                             valorMinimo={valorMinimoBraco}
                             valorBraco={valorBraco}
                         />
                     </div>
                     <div>
                         <Foguete
-                            valorMaximo={15}
+                            valorMaximo={valorMaximoGeral}
                             valorMinimo={valorMinimoFoguete}
                             valorFoguete={valorFoguete}
                         />
@@ -61,7 +63,7 @@ function Montagem() {
                     </div>
                     <div>
                         <Pernas
-                            valorMaximo={15}
+                            valorMaximo={valorMaximoGeral}
                             valorMinimo={valorMinimoPerna}
                             valorPerna={valorPerna}
                         />
