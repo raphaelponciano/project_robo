@@ -5,7 +5,7 @@ import style from "../css/GeralPartes.module.css"
 
 
 function Pernas(props) {
-  const { valorMaximo, valorMinimo, atualizaValor } = props;
+  const { valorMaximo, valorMinimo, valorPerna } = props;
 
   return (
     <div>
@@ -16,7 +16,7 @@ function Pernas(props) {
         <div>
           <Buttom valorMinimo={valorMinimo}
             valorMaximo={valorMaximo}
-            atualizaValor={atualizaValor}
+            valorPerna={valorPerna}
           />
         </div>
       </div>
